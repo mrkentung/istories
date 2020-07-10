@@ -7,21 +7,35 @@ const links = [
 
 export default function Nav() {
   return (
-    <nav>
-      <ul className="flex justify-between items-center p-8">
+    <nav className="container mx-auto">
+      <ul className="flex justify-between items-center p-6">
         <li>
           <Link href="/">
-            <a className="text-blue-500 no-underline">Home</a>
+            <a className="text-lg font-bold mr-6">Stories</a>
           </Link>
+          <span className="text-sm font-regular text-gray-700">Story from another world</span>
         </li>
         <ul className="flex justify-between items-center space-x-4">
-          {links.map(({ href, label }) => (
-            <li key={`${href}${label}`}>
-              <a href={href} className="btn-blue no-underline">
-                {label}
-              </a>
-            </li>
-          ))}
+          <li>
+            <a href="" className="no-underline text-sm text-gray-600 hover:text-gray-900 transition duration-500 ease-in-out">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a href="" className="no-underline text-sm text-gray-600 hover:text-gray-900 transition duration-500 ease-in-out">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="" className="no-underline text-sm text-gray-600 hover:text-gray-900 transition duration-500 ease-in-out">
+              Contact
+            </a>
+          </li>
+          <li>
+            <a href="" className="no-underline text-sm text-gray-600 hover:text-gray-900 transition duration-500 ease-in-out">
+              Write
+            </a>
+          </li>
         </ul>
       </ul>
     </nav>
